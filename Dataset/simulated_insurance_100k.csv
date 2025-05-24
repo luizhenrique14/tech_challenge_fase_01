@@ -1,4 +1,4 @@
-age,sex,bmi,children,smoker,region,charges
+idade,sexo,IMC,filhos,fumante,regiao,taxas
 56,female,35.4,4,no,southeast,10522.74
 46,female,26.4,3,yes,northeast,23534.12
 32,female,33.94,2,no,southwest,8923.73
