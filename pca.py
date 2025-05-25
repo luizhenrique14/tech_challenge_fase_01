@@ -17,9 +17,9 @@ df['fumante'] = label_encoder.fit_transform(df['fumante'])
 df['regiao'] = label_encoder.fit_transform(df['regiao'])
 
 print(df.head())
-features = ['idade','sexo','IMC','filhos','regiao','taxas']
+features = ['idade','sexo','IMC','filhos','regiao','fumante']
 X = df[features].values
-y = df['fumante'].values
+y = df['taxas'].values
 
 from sklearn.preprocessing import StandardScaler
 print('Normalizando os dados utilizando o standardScaler.....')
@@ -42,7 +42,7 @@ print('Criando um novo dataframe para visualizarmos como ficou nossos dados redu
 
 df_pca = pd.DataFrame(data = principalComponents, columns = ['PC1', 'PC2', 'PC3']) # Criando um novo dataframe para visualizarmos como ficou nossos dados reduzidos com o PCA
 
-target = pd.Series(y, name='fumante')
+target = pd.Series(y, name='taxas')
 result_df = pd.concat([df_pca, target], axis=1)
 print(result_df.head())
 

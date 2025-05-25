@@ -84,7 +84,7 @@ from sklearn.model_selection import train_test_split
 print('Apos a validacao entre a relacao entre as colunas fumante e taxas, removemos a coluna taxcas, pois ela tem coorelacao de 0.97 com a de fumante...')
 X = df.drop(columns=['fumante']) # Variáveis características
 X = df.drop(columns=['taxas']) # Variáveis características
-y = df['fumante'] # O que eu quero prever. (Target)
+y = df['taxas'] # O que eu quero prever. (Target)
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=74)
 
